@@ -1,13 +1,11 @@
 import React from 'react'
+import img from "../assets/int-oica.gif"
 
 const Home = () => {
   return (
     <div>
-    {/* <img src={img} alt="" className='w-full' /> */}
-    <img src="src/assets/int-oica.gif" alt="" className='w-full bg-center h-screen'  />
-    
+      <img src={img} alt="" className='w-full bg-center h-screen' />
     </div>
-    
   )
 }
 
