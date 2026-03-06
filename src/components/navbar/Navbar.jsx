@@ -1,0 +1,104 @@
+import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
+
+const Navbar = () => {
+  return (
+    <div className="relative w-full h-[78px] bg-gradient-to-r from-[#6e0ad6] via-[#5c0dc7] to-[#4a0bb8] flex items-center justify-around shadow-md border-b-2">
+      
+      {/* Logo */}
+      <div className="w-[10%] h-full flex items-center justify-around">
+        <div className="text-[170%] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#7c3aed]">
+          OICA
+        </div>
+      </div>
+
+      {/* Menu */}
+      <ul className="w-[50%] h-full flex items-center justify-evenly text-[150%] font-[500] text-white tracking-[1px]">
+
+        <li className="relative text-[17px] font-bold cursor-pointer w-[100px] h-[35px] flex items-center justify-center group overflow-hidden hover:text-[18px] hover:text-[#d8b4fe] transition-all duration-200 ease-in-out hover:scale-110 hover:underline">
+          <NavLink to="/">
+            <span className="z-10">Home</span>
+          </NavLink>
+          <span className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#91155d] via-[#525296] to-[#ff0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00f] via-[#fb0094] to-[#0f0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+        </li>
+
+        <li className="relative text-[17px] font-bold cursor-pointer w-[100px] h-[35px] flex items-center justify-center group overflow-hidden hover:text-[18px] hover:text-[#d8b4fe] transition-all duration-200 ease-in-out hover:scale-110 hover:underline">
+          <NavLink to="/about">
+            <span className="z-10">About</span>
+          </NavLink>
+          <span className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#91155d] via-[#525296] to-[#ff0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00f] via-[#fb0094] to-[#0f0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+        </li>
+
+        <li className="relative text-[17px] font-bold cursor-pointer w-[100px] h-[35px] flex items-center justify-center group overflow-hidden hover:text-[18px] hover:text-[#d8b4fe] transition-all duration-200 ease-in-out hover:scale-110 hover:underline">
+          <NavLink to="/contact">
+            <span className="z-10">Contact</span>
+          </NavLink>
+          <span className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#91155d] via-[#525296] to-[#ff0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00f] via-[#fb0094] to-[#0f0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+        </li>
+
+        <li className="relative text-[17px] font-bold cursor-pointer w-[100px] h-[35px] flex items-center justify-center group overflow-hidden hover:text-[18px] hover:text-[#d8b4fe] transition-all duration-200 ease-in-out hover:scale-110 hover:underline">
+          <NavLink to="/service">
+            <span className="z-10">Service</span>
+          </NavLink>
+          <span className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#91155d] via-[#525296] to-[#ff0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00f] via-[#fb0094] to-[#0f0] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-border"></span>
+        </li>
+
+      </ul>
+
+      {/* Login Button */}
+      <div className="w-[8%] h-[60%] rounded-xl flex items-center justify-center relative group">
+        <Link to="/login">
+          <button className="relative w-full h-full px-4 py-2 bg-[#fec195] text-[#181818] font-[700] tracking-[1px] border-[3px] border-[#fec195] rounded-xl transition-all duration-300 ease-in-out shadow-none group-hover:bg-transparent group-hover:text-[#fec195] group-hover:shadow-[0_0_25px_#fec1958c]">
+            Login
+            {[1, 2, 3, 4, 5, 6].map((star, i) => (
+              <div
+                key={i}
+                className={`absolute z-[-5] transition-all duration-[1000ms]
+                  ${star === 1 ? "top-[20%] left-[20%] w-[25px]" : ""}
+                  ${star === 2 ? "top-[45%] left-[45%] w-[15px]" : ""}
+                  ${star === 3 ? "top-[40%] left-[40%] w-[5px]" : ""}
+                  ${star === 4 ? "top-[20%] left-[40%] w-[8px]" : ""}
+                  ${star === 5 ? "top-[25%] left-[45%] w-[15px]" : ""}
+                  ${star === 6 ? "top-[5%] left-[50%] w-[5px]" : ""}
+                  group-hover:top-[-80%] group-hover:left-[-30%] group-hover:z-[2] group-hover:drop-shadow-[0_0_10px_#fffdef]`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 784.11 815.53"
+                  className="fill-[#fffdef]"
+                >
+                  <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                </svg>
+              </div>
+            ))}
+          </button>
+        </Link>
+      </div>
+
+      {/* Shapes */}
+      <div className="w-[8%] h-[120%] bg-white opacity-20 rounded-full absolute left-[10px] bottom-[5px]" />
+      <div className="w-0 h-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-b-[60px] border-b-white opacity-20 absolute right-[18%] bottom-2 rotate-180" />
+
+      {/* Animation */}
+      <style>
+        {`
+          @keyframes border {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+          .animate-border {
+            animation: border 3s linear infinite;
+            background-size: 200% 200%;
+          }
+        `}
+      </style>
+    </div>
+  )
+}
+
+export default Navbar
