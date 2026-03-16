@@ -10,7 +10,7 @@ import Services from "./pages/Services";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/dashboard/Dashboard";
 import Allusers from "./components/dashboardpages/AllUsers";
 import AllProducts from "./components/dashboardpages/AllProducts";
 import Cart from "./components/dashboardpages/Cart";
