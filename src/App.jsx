@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
-import Navbar from "./components/navbar/Navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Layout from "./Layout";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -9,12 +9,14 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Dashboared from "./components/Dashboared/Dashboared";
-import Allusers from "./components/dashboaredpages/AllUsers";
-import AllProducts from "./components/dashboaredpages/AllProducts";
-import Cart from "./components/dashboaredpages/Cart";
-import Profile from "./components/dashboaredpages/Profile";
-import Settings from "./components/dashboaredpages/Settings";
+
+import Dashboard from "./components/Dashboard/Dashboard";
+import Allusers from "./components/dashboardpages/AllUsers";
+import AllProducts from "./components/dashboardpages/AllProducts";
+import Cart from "./components/dashboardpages/Cart";
+import Profile from "./components/dashboardpages/Profile";
+import Settings from "./components/dashboardpages/Settings";
+
 import ProtectedRoute from "./privaterouting/ProtectedRoute";
 
 const App = () => {
@@ -24,12 +26,12 @@ const App = () => {
       element: <Layout />,
       children: [
         {
-          path: "/about",
-          element: <About />,
-        },
-        {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/about",
+          element: <About />,
         },
         {
           path: "/contact",
@@ -52,31 +54,31 @@ const App = () => {
           element: <Register />,
         },
         {
-          path: "/dashboared",
+          path: "/dashboard",
           element: (
             <ProtectedRoute>
-              <Dashboared />
+              <Dashboard />
             </ProtectedRoute>
           ),
           children: [
             {
-              path: "/dashboared/allusers",
+              path: "/dashboard/allusers",
               element: <Allusers />,
             },
             {
-              path: "/dashboared/allproducts",
+              path: "/dashboard/allproducts",
               element: <AllProducts />,
             },
             {
-              path: "/dashboared/cart",
+              path: "/dashboard/cart",
               element: <Cart />,
             },
             {
-              path: "/dashboared/profile",
+              path: "/dashboard/profile",
               element: <Profile />,
             },
             {
-              path: "/dashboared/settings",
+              path: "/dashboard/settings",
               element: <Settings />,
             },
           ],
