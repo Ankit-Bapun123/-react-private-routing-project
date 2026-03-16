@@ -11,7 +11,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 
 import Dashboard from "./components/dashboard/Dashboard";
-import Allusers from "./components/dashboardpages/AllUsers";
+import AllUsers from "./components/dashboardpages/AllUsers";
 import AllProducts from "./components/dashboardpages/AllProducts";
 import Cart from "./components/dashboardpages/Cart";
 import Profile from "./components/dashboardpages/Profile";
@@ -63,7 +63,7 @@ const App = () => {
           children: [
             {
               path: "/dashboard/allusers",
-              element: <Allusers />,
+              element: <AllUsers />,
             },
             {
               path: "/dashboard/allproducts",
