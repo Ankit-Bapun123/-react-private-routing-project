@@ -1,10 +1,14 @@
-import React, { Children } from 'react'
-import { Navigate } from 'react-router-dom'
+import React from "react";
+import { Navigate } from "react-router-dom";
 
-const ProtectedRoute = ({children}) => {
-    const token=localStorage.getItem("jwttoken")
-    
-  return token?children:<Navigate to="/login"/>
-}
+const ProtectedRoute = ({ children }) => {
+  const token = localStorage.getItem("jwttoken");
 
-export default ProtectedRoute
+  if (token) {
+    return children;
+  } else {
+    return <Navigate to="/login" />;
+  }
+};
+
+export default ProtectedRoute;
