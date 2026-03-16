@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Allusers = () => {
+const AllUsers = () => {
   return (
     <div>
-      Allusers
+      AllUsers
     </div>
   )
 }
 
-export default Allusers
+export default AllUsers
